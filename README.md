@@ -1,12 +1,45 @@
-# React + Vite
+E-Commerce Application 🛒
+A responsive e-commerce frontend built using React.js (Vite) and Tailwind CSS, with product listing, cart functionality, and clean UI interactions.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Demo
 
-Currently, two official plugins are available:
+🚀 Features
+✅ Home Page
+Responsive layout with Tailwind CSS
+Header with logo, navigation links, and cart icon
+Hero banner section
+Featured products section
+Footer with basic info
+✅ Product Listing
+Products fetched from fakestoreapi.com
+Responsive product grid layout
+Each product includes image, title, price, and “Add to Cart” button
+✅ Cart Functionality
+Mini cart dropdown when clicking cart icon
+Full cart page with:
+Product details
+Quantity adjuster
+Remove item button
+Order summary (subtotal, total)
+Proceed to checkout button
+🧠 Bonus Features (if implemented)
+Product search
+Filtering and sorting
+Dark mode toggle 🌙(implemented But unfortunatly it is not working properly)
+Local storage cart persistence
+Smooth transitions and animations
+Unit testing for cart logic
+⚙ Tech Stack
+Tech Description
+React.js JavaScript UI library
+Vite Build tool for React apps
+Tailwind CSS Utility-first CSS framework
+Zustand / Context API State management
+FakeStore API Mock product data source
+🛠 Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repo
+   git clone
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+installation : npm install(To install all the dependencies)
+run : npm run dev (To run the project)
