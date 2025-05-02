@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@layer base {
+  :root {
+    --color-primary: 124 58 237; /* purple-600 */
+    --color-secondary: 236 72 153; /* pink-500 */
+    --color-background: 249 250 251; /* gray-50 */
+    --color-surface: 255 255 255; /* white */
+    --color-text: 17 24 39; /* gray-900 */
+    --color-text-secondary: 107 114 128; /* gray-500 */
+    --color-border: 229 231 235; /* gray-200 */
+  }
+
+  .dark {
+    --color-primary: 139 92 246; /* purple-500 */
+    --color-secondary: 244 114 182; /* pink-400 */
+    --color-background: 15 23 42; /* slate-900 */
+    --color-surface: 30 41 59; /* slate-800 */
+    --color-text: 248 250 252; /* slate-50 */
+    --color-text-secondary: 148 163 184; /* slate-400 */
+    --color-border: 51 65 85; /* slate-700 */
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-text font-medium transition-colors duration-200;
+  }
+
+  /* Force immediate application of dark mode to prevent flicker */
+  html.dark {
+    color-scheme: dark;
+  }
+
+  /* Transition all color properties for smooth theme switching */
+  *,
+  *::before,
+  *::after {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 200ms;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background dark:bg-surface;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-3000 {
+  animation-delay: 3s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-500 {
+  transition-delay: 500ms;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
